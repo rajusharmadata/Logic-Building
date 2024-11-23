@@ -1,5 +1,7 @@
 import java.util.*;
 public class majorityElement {
+    // when also Mejority Element is exits ....
+    
     public static int Majorityelement(int arr[]) {
         /*
         // Brutforce ()
