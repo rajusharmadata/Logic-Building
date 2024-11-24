@@ -36,7 +36,7 @@ public class majorityElement {
                 ans = arr[i];
             }
             if(freq>(arr.length/2)){
-                return arr[i];
+                return ans;
             }
          }
          
