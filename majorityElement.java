@@ -25,18 +25,17 @@ public class majorityElement {
 
          // optimal Aproach 
          Arrays.sort(arr);
-        //  for(int i = 0;i<arr.length;i++){
-        //     System.out.print(arr[i] + " ");
-        //  }
-         int frequence =1;
+         int freq =1;
+         int ans = arr[0];
 
-         for(int i = 0;i<arr.length;i++){
-            if(arr[i] == arr[i+1]){
-                frequence++;
+         for(int i = 1;i<arr.length;i++){
+            if(arr[i] == arr[i-1]){
+                freq++;
             }else{
-                frequence =1;
+                freq =1;
+                ans = arr[i];
             }
-            if(frequence>(arr.length/2)){
+            if(freq>(arr.length/2)){
                 return arr[i];
             }
          }
@@ -45,7 +44,7 @@ public class majorityElement {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1,2};
+        int arr[] = { 1,2,8,1,1};
         int element = Majorityelement(arr);
         System.out.println(element);
     }
